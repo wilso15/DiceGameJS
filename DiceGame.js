@@ -17,6 +17,9 @@ function chooseWinningNumber();{
 /*----------------------- Nick ----------------------*/
 function decideFirstRoller();{
 test
+test
+test
+test
 }
 /*----------------------- Nick ----------------------*/
 
