@@ -1,9 +1,21 @@
 "use strict";
 
-function nameEntry() {
+var human1;
+human1 = myPerson1();
+var human2;
+human2 = myPerson2();
 
+function myPerson1(){
+	var person1; 
+	person1 = prompt("DiceGame: Player 1");
+	return person1;
+	
 }
-
+function myPerson2(){
+	var person2;
+	person2 = prompt("DiceGame: Player 2");
+	return person2;
+}
 
 function totalScore() {
 
