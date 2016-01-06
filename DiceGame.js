@@ -41,6 +41,12 @@ test
 /*----------------------- Nick ----------------------*/
 
 function getRandomDiceRoll() {
+var randDice 
+randDice= 1 + Math.floor(Math.random()*6);
+return(randDice); 
+}
+
+
 
 }
 
