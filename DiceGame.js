@@ -1,25 +1,25 @@
 "use strict";
 
-var human1;
-human1 = myPerson1();
-var human2;
-human2 = myPerson2();
+var  playerInput;
+var  playTo;
 
-function myPerson1(){
-	var person1; 
-	person1 = prompt("DiceGame: Player 1");
-	return person1;
-	
-}
-function myPerson2(){
-	var person2;
-	person2 = prompt("DiceGame: Player 2");
-	return person2;
-}
 
-function totalScore() {
-
+function getPlayerInput(ask){
+	var playerInput;
+	playerInput= prompt(ask);
+	return playerInput;
 }
+var p1Message;
+var p2Message;
+var person1;
+var person2;
+person1 = getPlayerInput(p1Message);
+person2 = getPlayerInput(p2Message);
+p1Message = "Dice Game Player 1";
+p2Message = "Dice Game Player 2";
+
+console.log(person1);
+console.log(person2);
 
 /*vvvvvvvvvvvvvvvvvvv Dan vvvvvvvvvvvvvv-Choose a number to play to-vvvvvvvvvvvvvvvv*/
 function winningNumber() {
