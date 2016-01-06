@@ -6,7 +6,8 @@ human1 = myPerson1();
 human2 = myPerson2();
 human1score = 
 human2score = 
-playerdiceroll = getRandomDiceRoll
+playerDiceRoll = getRandomDiceRoll();
+scoreTotal = 0;
 
 
 function createPerson1(){
@@ -22,16 +23,14 @@ function createPerson2(){
 }
 
 function getRandomDiceRoll() {
-var randDice 
-randDice= 1 + Math.floor(Math.random()*6);
-return(randDice); 
+	var randDice 
+	randDice= 1 + Math.floor(Math.random()*6);
+	return(randDice); 
 }
 
-function AddScorePlayer(randomrollplayer) {
-    var scoreTotal 
-	scoreTotal = 0;
-    human1 = scoreTotal;
-    scoreTotal += randomrollplayer;
+function AddScorePlayer(scoreTotal, playerdiceroll) {
+    scoreTotal += playerDiceRoll;
+	return(scoreTotal)
 }
 
 
@@ -52,20 +51,20 @@ function winningNumber() {
         winningNumber();
     }
 	}
+	
 
 
+/*
 game(){
 while ()
 }
+*/
 
-
-randomrollplayer1 = diceroll()
 
 /*function AddScorePlayer2(diceroll, playTo, myPerson1, myPerson2) {
     var scoreTotal2 = 0
     myPerson2 = scoreTotal2
 */
 
-AddScorePlayer1();
 
 
