@@ -1,5 +1,12 @@
 "use strict";
+var  playerInput;
+var  playTo;
 
+
+function getPlayerInput(ask){
+	var playerInput;
+	playerInput= prompt(ask);
+	return playerInput;
 var human1;
 var human2;
 human1 = myPerson1();
@@ -28,10 +35,28 @@ function getRandomDiceRoll() {
 	return(randDice); 
 }
 
+
 function AddScorePlayer(scoreTotal, playerdiceroll) {
     scoreTotal += playerDiceRoll;
 	return(scoreTotal)
+	
+function AddScorePlayer(randomrollplayer) {
+    var scoreTotal 
+	scoreTotal = 0;
+    human1 = scoreTotal;
+    scoreTotal += randomrollplayer;
 }
+var p1Message;
+var p2Message;
+var person1;
+var person2;
+person1 = getPlayerInput(p1Message);
+person2 = getPlayerInput(p2Message);
+p1Message = "Dice Game Player 1";
+p2Message = "Dice Game Player 2";
+
+console.log(person1);
+console.log(person2);
 
 
 function winningNumber() {
