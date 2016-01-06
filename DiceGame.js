@@ -1,5 +1,6 @@
 "use strict";
 
+<<<<<<< HEAD
 var  playerInput;
 var  playTo;
 
@@ -8,6 +9,40 @@ function getPlayerInput(ask){
 	var playerInput;
 	playerInput= prompt(ask);
 	return playerInput;
+=======
+var human1;
+var human2;
+human1 = myPerson1();
+human2 = myPerson2();
+human1score = 
+human2score = 
+playerdiceroll = getRandomDiceRoll
+
+
+function createPerson1(){
+	var person1; 
+	person1 = prompt("DiceGame: Player 1");
+	return person1;
+}
+
+function createPerson2(){
+	var person2;
+	person2 = prompt("DiceGame: Player 2");
+	return person2;
+}
+
+function getRandomDiceRoll() {
+var randDice 
+randDice= 1 + Math.floor(Math.random()*6);
+return(randDice); 
+}
+
+function AddScorePlayer(randomrollplayer) {
+    var scoreTotal 
+	scoreTotal = 0;
+    human1 = scoreTotal;
+    scoreTotal += randomrollplayer;
+>>>>>>> 65bf39cc5883b4bb1169e29287a61fb1f99dfbc6
 }
 var p1Message;
 var p2Message;
@@ -21,7 +56,7 @@ p2Message = "Dice Game Player 2";
 console.log(person1);
 console.log(person2);
 
-/*vvvvvvvvvvvvvvvvvvv Dan vvvvvvvvvvvvvv-Choose a number to play to-vvvvvvvvvvvvvvvv*/
+
 function winningNumber() {
     var playTo;
     playTo = prompt("Play to 13, 21 or 35!");
@@ -38,35 +73,13 @@ function winningNumber() {
         alert("FOLLOW DIRECTIONS!!");
         winningNumber();
     }
-};
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Dan ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+	}
 
-/*----------------------- Nick ----------------------*/
 
-function decideFirstRoller() {
-test
-test
-test
-test
-
-}
-/*----------------------- Nick ----------------------*/
-
-function getRandomDiceRoll() {
-var randDice 
-randDice= 1 + Math.floor(Math.random()*6);
-return(randDice); 
+game(){
+while ()
 }
 
-
-
-}
-
-function AddScorePlayer1(randomrollplayer1) {
-    var scoreTotal1 = 0;
-    myPerson1() = scoreTotal1;
-    scoreTotal1 += randomrollplayer1;
-}
 
 randomrollplayer1 = diceroll()
 
@@ -76,3 +89,5 @@ randomrollplayer1 = diceroll()
 */
 
 AddScorePlayer1();
+
+
