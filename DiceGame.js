@@ -12,11 +12,9 @@ var person2;
 var diceRoll 
 diceRoll = getRandomDiceRoll();
 
-person1 = getPlayerInput(p1Message);
-person2 = getPlayerInput(p2Message);
+person1 = getPlayerInput("Player 1");
+person2 = getPlayerInput("Player 2");
 
-p1Message = "Dice Game Player 1";
-p2Message = "Dice Game Player 2";
 
 function getPlayerInput(ask){
 	var playerInput;
@@ -42,21 +40,26 @@ function addScore() {
 	return result;
 }
  
+ 
+ 
 function runGame(){
 	var totalScore;
 	var playTo;
 	var p1totalScore;
+	var p2totalScore;
+	p2totalScore = 0;
 	p1totalScore = 0;
 	playTo = getWinningNumber();
-	console.log(playTo, "playto");
-	while (p1totalScore !== playTo){
+	while (p1totalScore !== playTo && p2totalScore !== playTo){
 		diceRoll = getRandomDiceRoll();
 		console.log(diceRoll, "diceroll");
 		console.log(p1totalScore, "p1totalscore");
 		p1totalScore += diceRoll;
 		console.log(p1totalScore, "p1totalscore, after");
-		alert("You rolled a " + diceRoll + " your total is " + p1totalScore);
-
+		alert("Player 1 rolled a " + diceRoll + " your total is " + p1totalScore);
+		p2totalScore += diceRoll;
+		console.log (p2totalScore, "p2totalScore")
+		alert("Player 2 rolled a " + diceRoll + " your total is " + p2totalScore);
 		
 	 }
 	}
@@ -67,3 +70,4 @@ runGame();
 // create a function to reset to 0 with if else statement
 // 2 players, alternating turns, 
 // a function to see if you have won. 
+//player 1 
