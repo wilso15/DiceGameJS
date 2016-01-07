@@ -1,14 +1,20 @@
 "use strict";
-var playerInput;
-var playerDiceRoll;
 
+var p1score;
+var p2score;
 
 var p1Message;
 var p2Message;
+
 var person1;
 var person2;
+
+var diceRoll 
+diceRoll = getRandomDiceRoll();
+
 person1 = getPlayerInput(p1Message);
 person2 = getPlayerInput(p2Message);
+
 p1Message = "Dice Game Player 1";
 p2Message = "Dice Game Player 2";
 
@@ -24,36 +30,40 @@ function getWinningNumber() {
 	return playTo;
 }
 
-var p1score;
-var p2score;
-p1score = addScore(diceRoll, scoreTotal);
-p2score = addScore(diceRoll, scoreTotal);
-
 function getRandomDiceRoll() {
 	var randDice 
 	randDice= 1 + Math.floor(Math.random()*6);
 	return randDice; 
 }
 
-function addScore(diceRoll, scoreTotal) {
+function addScore() {
 	var result; 
 	result = scoreTotal += diceRoll;
 	return result;
 }
-
+ 
 function runGame(){
 	var totalScore;
-	var diceRoll;
 	var playTo;
+	var p1totalScore;
 	p1totalScore = 0;
 	playTo = getWinningNumber();
+	console.log(playTo, "playto");
 	while (p1totalScore !== playTo){
 		diceRoll = getRandomDiceRoll();
+		console.log(diceRoll, "diceroll");
+		console.log(p1totalScore, "p1totalscore");
 		p1totalScore += diceRoll;
-		alert("You rolled a " + diceRoll". Turn over.");
+		console.log(p1totalScore, "p1totalscore, after");
+		alert("You rolled a " + diceRoll + " your total is " + p1totalScore);
+
+		
+	 }
 	}
-}
-// need a loop that takes in add points within the main function
+
+runGame();
+
+
 // create a function to reset to 0 with if else statement
 // 2 players, alternating turns, 
 // a function to see if you have won. 
