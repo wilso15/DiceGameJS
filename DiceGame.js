@@ -1,25 +1,23 @@
-"use strict";
-
-var p1score;
-var p2score;
-
-var p1Message;
-var p2Message;
-
-var person1;
-var person2;
-
-var diceRoll 
-diceRoll = getRandomDiceRoll();
-
-person1 = getPlayerInput("Player 1");
-person2 = getPlayerInput("Player 2");
+function playerInput(people){
+	var players;
+	players = prompt(people);
+	return players;
+	}
 
 
-function getPlayerInput(ask){
-	var playerInput;
-	playerInput= prompt(ask);
-	return playerInput;
+
+
+var player1id;
+var player2id;
+var player1name;
+var player2name;
+player1id = "Player 1";
+player2id = "Player 2";
+player1name = playerInput(player1id);
+player2name = playerInput(player2id);
+
+console.log("Player 1", player1name);
+console.log("Player 2", player2name);
 }
 
 function getWinningNumber() {
