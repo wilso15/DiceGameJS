@@ -1,11 +1,16 @@
-function playerInput(people){
-	var players;
-	players = prompt(people);
-	return players;
-	}
+"use strict";
 
+var p1score;
+var p2score;
 
+var p1Message;
+var p2Message;
 
+var person1;
+var person2;
+
+var diceRoll
+diceRoll = getRandomDiceRoll();
 
 var player1id;
 var player2id;
@@ -18,7 +23,17 @@ player2name = playerInput(player2id);
 
 console.log("Player 1", player1name);
 console.log("Player 2", player2name);
-}
+
+
+
+function playerInput(people){
+	var players;
+	players = prompt(people);
+	return players;
+	}
+
+
+
 
 function getWinningNumber() {
     var playTo;
@@ -32,32 +47,37 @@ function getRandomDiceRoll() {
 	return randDice; 
 }
 
-function addScore() {
-	var result; 
-	result = scoreTotal += diceRoll;
-	return result;
+function overLimit(playTo){
+    var resetZero = 0;
+    if(playerScore > playTo){
+        playerScore = resetZero;
+        console.log("YOU WENT OVER 13. YOUR SCORE IS RESET TO ZERO!");
+        return resetZero;
+    }
 }
- 
- 
  
 function runGame(){
 	var totalScore;
 	var playTo;
 	var p1totalScore;
 	var p2totalScore;
+
 	p2totalScore = 0;
 	p1totalScore = 0;
 	playTo = getWinningNumber();
 	while (p1totalScore !== playTo && p2totalScore !== playTo){
-		diceRoll = getRandomDiceRoll();
-		console.log(diceRoll, "diceroll");
-		console.log(p1totalScore, "p1totalscore");
-		p1totalScore += diceRoll;
-		console.log(p1totalScore, "p1totalscore, after");
-		alert("Player 1 rolled a " + diceRoll + " your total is " + p1totalScore);
-		p2totalScore += diceRoll;
-		console.log (p2totalScore, "p2totalScore")
-		alert("Player 2 rolled a " + diceRoll + " your total is " + p2totalScore);
+		var p1diceRoll
+		var p2diceRoll
+		p1diceRoll = getRandomDiceRoll();
+		p2diceRoll = getRandomDiceRoll();
+		
+		p1totalScore += p1diceRoll;
+
+		alert("Player 1 rolled a " + p1diceRoll + " your total is " + p1totalScore);
+
+		p2totalScore += p2diceRoll;
+
+		alert("Player 2 rolled a " + p2diceRoll + " your total is " + p2totalScore);
 		
 	 }
 	}
