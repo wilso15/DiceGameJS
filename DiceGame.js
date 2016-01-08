@@ -66,10 +66,10 @@ function runGame(playTo, person1, person2, p1diceRoll, p2diceRoll){
         if (p1totalScore > playTo && p2totalScore > playTo) {
             console.log(" * * BOTH Went over Limit of "+playTo+" * * ");
         } else if (p1totalScore > playTo) {
-            console.log(person1 + " went over Limit of "+playTo+" * * ");
+            console.log(" * * "+person1 + " went over Limit of "+playTo+" * * ");
             alert("*** The Limit of " + playTo + " exceeded by " + person1 + ". Press OK to reset to zero!***");
         } else{
-            console.log(person2 + " * * went over Limit of " + playTo + " * * ");
+            console.log(" * * "+person2 + " went over Limit of " + playTo + " * * ");
             alert("*** The Limit of " + playTo + " exceeded by " + person2 + ". Press OK to reset to zero!***");
         }
         alert("***Both scores returned to zero!  Press OK to start over***");
