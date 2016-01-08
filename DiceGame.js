@@ -1,5 +1,5 @@
 "use strict";
-
+document.getElementById("button").addEventListener("click", function(){main()});
 function main(){
     var p1Message;
     var p2Message;
