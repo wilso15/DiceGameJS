@@ -1,5 +1,5 @@
 "use strict";
-
+document.getElementById("button").addEventListener("click", function(){main()});
 function main(){
     var p1Message;
     var p2Message;
@@ -86,6 +86,5 @@ function runGame(playTo, person1, person2, p1diceRoll, p2diceRoll){
             alert("Good Job " + person2 +"! You Win!");
             console.log("%c   Thanks For Playing!", "color: red; font-style: italic");
         }
-
      }
 }
